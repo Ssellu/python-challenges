@@ -11,8 +11,8 @@
 import random
 
 correct = random.randint(1, 1000)
-cnt = 0
-
+cnt = 1
+print('진짜 정답 : ', correct)
 while True:
     user = int(input('답 : '))
     if correct < user:
@@ -22,13 +22,13 @@ while True:
     else:
         print("CORRECT!")
         break
-
+    cnt += 1
 
 # 방법1
-# if cnt > 15:
+# if cnt < 15:
 #     print('승리!')
 # else:
 #     print('패배')
 
 # 방법2
-print('승리!' if cnt > 15 else '패배')
+print('승리!' if cnt < 15 else '패배')
