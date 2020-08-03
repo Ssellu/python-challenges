@@ -31,11 +31,13 @@ class SinglyLinkedList:
     def add(self, data: int):
         pass
 
-    def order(self):
+    @staticmethod
+    def order():
         tmp = SinglyLinkedList.head
         while tmp:
             print(tmp.data)
             tmp = tmp.next
+
 
 lst = SinglyLinkedList()
 lst.add(10)
@@ -44,4 +46,5 @@ lst.add(20)
 lst.add(30)
 lst.add(1250)
 
+lst.order()
 # 10 100 20 30 1250 순으로 데이터가 출력될 수 있도록 add()를 완성하세요.
