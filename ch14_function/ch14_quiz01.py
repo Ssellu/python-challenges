@@ -1,29 +1,19 @@
 """
-    - 밑의 각 변수 var 가 지역변수인지 전역변수인지 주석에 기입하세요.
-
-    - 21번줄에 왜 에러가 발생했는지 추론하여 설명하세요.
-
-    - func3()이 전역변수의 var 를 100으로 변경할 수 있도록 코드를 수정하세요.
+    함수명 : get_average()
+    인자 : 국, 영, 수
+    하는 일 : 세 과목의 평균 구하기
+    리턴 : 평균
 
 """
-
-var = 10  # ______
-
-
-def func1():
-    print(var)  # ______
+# 함수 정의는 이곳에
 
 
-def func2():
-    var = 100   # ______
-    print(var)  # ______
 
 
-def func3():
-    print(var)  # ______
-    var = 100   # ______
+# 테스트는 이곳에
+print(get_average(88, 77, 66))
 
-func1()  # 10
-func2()  # 100
-func3()  # # UnboundLocalError: local variable 'var' referenced before assignment
-print(f'전역변수 var 의 값 : {var}')  # 이곳에 100이 출력되어야 합니다.
+k = int(input('국:'))
+e = int(input('영:'))
+m = int(input('수:'))
+print(f'평균 : {get_average(k, e, m)}')
