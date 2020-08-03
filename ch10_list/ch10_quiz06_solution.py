@@ -10,3 +10,20 @@
         (위 6개의 테스트를 모두 통과해야합니다.)
 
 """
+
+s = input('괄호 : ')
+lst = list(s)
+print(lst)
+
+t = 0
+for p in lst:
+    if p == '(':
+        t += 1
+    elif p == ')':
+        t -= 1
+    if t < 0:
+        break
+if t == 0:
+    print(True)
+else:
+    print(False)

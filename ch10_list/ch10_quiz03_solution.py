@@ -20,9 +20,31 @@
     16  15  14  13
 
 """
-# lst = [[m + n for n in range(1, 5)] for m in range(0, 14, 4)]
-# print(lst)
+lst = [[m + n for n in range(1, 5)] for m in range(0, 14, 4)]
 
+print('---- 가로 방향 출력 ----')
+for i in range(len(lst)):
+    for j in range(len(lst[i])):
+        print(lst[i][j], end='\t')
+    print()
+
+
+print('---- 세로 방향 출력 ----')
+for i in range(len(lst)):
+    for j in range(len(lst[i])):
+        print(lst[j][i], end='\t')
+    print()
+
+print('---- 지그재그 방향 출력 ----')
+for i in range(len(lst)):
+
+    if i % 2 == 0:
+        for j in range(len(lst[i])):
+            print(lst[i][j], end='\t')
+    else:
+        for j in range(len(lst[i])):
+            print(lst[i][3-j], end='\t')
+    print()
 """
 
     가로 10칸, 세로 10칸으로 구성된 이차원리스트 map 이 있습니다.
@@ -48,26 +70,30 @@ while True:
         break
     user_c = int(input('열:'))
 
-    r = 0
-    while r < 10:
-        c = 0
-        while c < 10:
+    for r in range(10):
+        for c in range(10):
             if user_r == r or \
                     user_c == c or \
                     user_c + user_r == c + r or \
                     user_c - user_r == c - r:
                 map[r][c] += 1
-            c += 1
-        r += 1
 
-    print(f'{ " ":4}',end='')
-    for i in range(10):
-        print(f'{"[" + str(i) + "]":4}', end='')
-    print()
-    a = 0
+    # 방법1. 간단하게 보여주기
     for n in map:
-        print(f'{"[" + str(a) + "]":4}', end='')
         for m in n:
             print(f'{m:4}', end='')
         print()
-        a += 1
+
+
+    # 방법2. 인덱스를 붙여 보여주기
+    # print(f'{" ":4}', end='')
+    # for i in range(10):
+    #     print(f'{"[" + str(i) + "]":4}', end='')
+    # print()
+    # a = 0
+    # for n in map:
+    #     print(f'{"[" + str(a) + "]":4}', end='')
+    #     for m in n:
+    #         print(f'{m:4}', end='')
+    #     print()
+    #     a += 1

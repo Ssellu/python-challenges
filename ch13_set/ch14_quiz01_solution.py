@@ -7,3 +7,13 @@
 
 """
 
+import random
+lotto_set = set()
+while len(lotto_set) != 6:
+    lotto_set.add(random.randint(1, 45))
+
+lotto = list(lotto_set)
+lotto.sort()
+print(lotto)
+
+
