@@ -46,5 +46,3 @@ Detailed steps can be found in the `CONTRIBUTING.md` file.
 This project is licensed under the MIT License. See the `LICENSE` file for details.
 
 ---
-
-각 섹션은 명확하고 이해하기 쉽게 작성되어 있으며, GitHub 사용자들이 이 문제 모음집을 어떻게 활용할 수 있는지 알려줍니다. 필요하다면 이 README.md를 자유롭게 수정하거나 추가할 내용을 넣으세요.
